@@ -1,0 +1,19 @@
+#!/bin/sh
+# Convert Cx-like esperanto typography into the correct unicode character (Ĉ ĉ Ĝ ĝ Ĥ ĥ Ĵ ĵ Ŝ ŝ Ŭ ŭ)
+# Xx is convert to x
+
+sed -i \
+	-e 's/Cx/Ĉ/g' \
+	-e 's/cx/ĉ/g' \
+	-e 's/Gx/Ĝ/g' \
+	-e 's/gx/ĝ/g' \
+	-e 's/Hx/Ĥ/g' \
+	-e 's/hx/ĥ/g' \
+	-e 's/Jx/Ĵ/g' \
+	-e 's/jx/ĵ/g' \
+	-e 's/Sx/Ŝ/g' \
+	-e 's/sx/ŝ/g' \
+	-e 's/Ux/Ŭ/g' \
+	-e 's/ux/ŭ/g' \
+	-e 's/Xx/x/g' \
+	$@
